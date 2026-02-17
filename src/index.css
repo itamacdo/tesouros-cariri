@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-folha: #2D5A27;
+  --color-terra: #F5F5F0;
+  --color-noite: #0B1221;
+  --color-prata: #E2E8F0;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  background-color: var(--color-terra);
+  transition: background-color 0.5s ease;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
