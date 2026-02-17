@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import profileImg from '../assets/profile.jpg'; 
 
-export default function AboutModal({ isOpen, onClose, isDarkMode }) {
+// Removemos o import direto da imagem aqui para usar a que vem do App.jsx
+export default function AboutModal({ isOpen, onClose, isDarkMode, profileImg }) {
   if (!isOpen) return null;
 
   return (
@@ -26,6 +26,7 @@ export default function AboutModal({ isOpen, onClose, isDarkMode }) {
         
         <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
           <div className="relative shrink-0">
+            {/* Moldura da Foto com efeito de elevação */}
             <div className={`w-32 h-32 md:w-40 md:h-40 rounded-3xl overflow-hidden border-4 ${
               isDarkMode ? 'border-[#2D5A27]/20' : 'border-stone-50'
             } shadow-xl bg-stone-100`}>
@@ -55,6 +56,17 @@ export default function AboutModal({ isOpen, onClose, isDarkMode }) {
               <p>
                 Com paixão por <strong>dados, pesquisa e programação</strong>, ela utiliza a tecnologia para democratizar a ciência nutricional, transformando informações complexas em conhecimentos acessíveis e visuais.
               </p>
+            </div>
+
+            {/* Tags de competências para preencher o visual */}
+            <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-2">
+              {['Nutrição', 'Gastronomia', 'React', 'Data Science'].map(skill => (
+                <span key={skill} className={`px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider border ${
+                  isDarkMode ? 'bg-white/5 border-white/10 text-[#A7C957]' : 'bg-stone-50 border-stone-100 text-stone-500'
+                }`}>
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
         </div>
