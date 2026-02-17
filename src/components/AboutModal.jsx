@@ -41,7 +41,7 @@ export default function AboutModal({ isOpen, onClose, isDarkMode }) {
           </div>
 
           <div className="text-center md:text-left">
-            <h2 className="text-3xl font-serif font-bold mb-1 tracking-tight">Maria Ita Ferreira de Macêdo</h2>
+            <h2 className="text-3xl font-serif font-bold mb-1 tracking-tight">Maria Ita Macêdo</h2>
             <p className={`text-xs font-bold uppercase tracking-widest mb-6 italic ${
               isDarkMode ? 'text-[#A7C957]' : 'text-emerald-600'
             }`}>
