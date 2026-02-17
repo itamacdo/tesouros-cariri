@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite' // Esta é a linha que está faltando!
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
