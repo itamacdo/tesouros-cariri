@@ -1,20 +1,19 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --color-folha: #2D5A27;
-  --color-terra: #F5F5F0;
-  --color-noite: #0B1221;
-  --color-prata: #E2E8F0;
-
-  --font-serif: "Playfair Display", serif;
-  --font-sans: "Inter", sans-serif;
-}
-
+/* Regra global para a cor de fundo */
 :root {
-  background-color: var(--color-terra);
-  transition: background-color 0.5s ease;
+  background-color: #F5F5F0; /* Cor Terra */
+  color: #2D2926;
 }
 
+/* Esconder a barra de rolagem */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
